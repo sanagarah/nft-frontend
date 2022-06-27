@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Flex, Heading } from "@chakra-ui/react";
+import ProductList from "./components/ProductList";
+import data from "./data/products";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Flex
+      direction="column"
+      alignItems="center"
+      paddingBlock="50px"
+      backgroundColor="#011627"
+    >
+      <Heading fontSize="5xl" paddingBottom="100px" textColor="white">
+        NFT Example
+      </Heading>
+      <ProductList products={data} />
+    </Flex>
   );
-}
+};
 
 export default App;
